@@ -12,27 +12,31 @@
 		box-sizing: border-box
 
 *::-webkit-input-placeholder
-	color: #666
+	color: $lightGrey
 	opacity: 1
 
 *:-moz-placeholder
-	color: #666
+	color: $lightGrey
 	opacity: 1
 
 *::-moz-placeholder
-	color: #666
+	color: $lightGrey
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
+	color: $lightGrey
 	opacity: 1
+
+::selected
+  background-color: $accent
+  color: $accent
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #666
+	color: $lightGrey
 body input:required:valid,
 body textarea:required:valid
-	color: #666
+	color: $lightGrey
 
 html, body
 	height: 100%
@@ -54,10 +58,6 @@ body
 .text-center
 	text-align: center
 
-::selection
-	background-color: $accent
-	color: #fff
-
 .underlined
 	text-decoration: underline	
 
@@ -67,64 +67,25 @@ body
 .bold
 	font-weight: bold
 
+.italic
+  font-style: italic
+
+.colored
+  color: $main
+
 .spoiler-link
-  color: #2196F3
+  color: $main
+  text-decoration: underline
   &:hover
-    color: #2196F3
+    color: $main
+    text-decoration: none
   &:active
-    color: #2196F3
+    color: $main
   &:focus
-    color: #2196F3
+    color: $main
 
 .spoiler-content
 	display: none
-
-.button
-  color: #fff
-  border: none
-  line-height: 40px
-  padding: 0 25px
-  font-size: 13px
-  font-weight: 600
-  display: inline-block
-  background-color: #2ea2cc
-  letter-spacing: 2px
-  cursor: pointer
-  text-transform: uppercase
-  -webkit-transition: all .2s
-  -o-transition: all .2s
-  transition: all 0.2s
-  &:hover
-    color: #fff
-    text-decoration: none
-    background-color: #44aed5
-
-.ghost-button
-  display: inline-block
-  -webkit-border-radius: 3px
-  border-radius: 3px
-  background-color: transparent
-  border: 1px solid #222
-  color: #222
-  font-size: 10px
-  -webkit-transition: all .2s ease-in-out
-  -o-transition: all .2s ease-in-out
-  transition: all 0.2s ease-in-out
-  &:hover
-    background-color: #222
-    text-decoration: none
-    color: #fff
-  &:active
-    background-color: #131313
-    text-decoration: none
-    color: #fff
-  &:focus
-    text-decoration: none
-    color: #222
-
-.m-button
-  padding: 6px 10px
-  line-height: 20px
 
 .ten
   position: fixed
@@ -144,7 +105,7 @@ body
   left: 50%
   margin-top: -155px
   margin-left: -155px
-  background-color: #fff
+  background-color: $white
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.6)
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.6)
   z-index: 999
@@ -177,9 +138,16 @@ header ul
     margin: 0 10px
     a
       font-size: 18px
+      color: $main
+      &:hover
+        color: $main
+      &:active
+        color: $main
+      &:focus
+        color: $main
 
 .page-head
-  background-color: #f2f2f2
+  background-color: $light
   padding: 20px 0
   .ghost-button
     float: right
@@ -216,7 +184,7 @@ p
 	text-align: justify
 
 a
-	color: #2b2b2b
+	color: $dark
 
 .s-header .s-descr-wrap
   text-align: center
@@ -229,215 +197,11 @@ a
     font-weight: 600
     letter-spacing: 5px
 
-.logo
-  font-family: Katherine
-  font-size: 2.25em
-  color: #2b2b2b
-  -webkit-transition: all .5s ease
-  -o-transition: all .5s ease
-  transition: all .5s ease
-  letter-spacing: 1px
-  z-index: 2
-  &:hover
-    color: #b0226e
-    text-decoration: none
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.6), 0 0 1px rgba(255, 0, 222, 0.6), 0 0 2px rgba(255, 0, 222, 0.6), 0 0 5px rgba(255, 0, 222, 0.6), 0 0 0 rgba(255, 0, 222, 0.6), 0 0 20px rgba(255, 0, 222, 0.6)
-  &:active, &:focus, &:visited
-    text-decoration: none
-    color: #b0226e
-
-.ishome .logo
-  color: #fff
-  font-size: 2.125em
-  z-index: 100
-  width: 70px
-  height: 70px
-  display: block
-  img
-    width: 100%
-
-.contacts a svg
-  fill: #ccc
-
-.toggle-mnu
-  width: 60px
-  height: 60px
-  float: right
-  position: fixed
-  top: 20px
-  right: 20px
-  z-index: 100
-  border: none
-  background-color: #000
-  .sandwich
-    width: 28px
-    height: 28px
-    position: absolute
-    top: 8px
-    bottom: 0
-    left: 0
-    right: 0
-    margin: auto
-    z-index: 200
-    > span
-      display: block
-
-.sandwich
-  width: 28px
-  height: 28px
-  position: absolute
-  top: 8px
-  bottom: 0
-  left: 0
-  right: 0
-  margin: auto
-  z-index: 200
-  > span
-    display: block
-
-.sw-topper
-  position: relative
-  top: 0
-  width: 28px
-  height: 3px
-  background: #fff
-  border: none
-  -webkit-border-radius: 4px 4px 4px 4px
-  border-radius: 4px 4px 4px 4px
-  -webkit-transition: top .2s, -webkit-transform .5s
-  transition: top .2s, -webkit-transform .5s
-  -o-transition: transform .5s, top .2s
-  transition: transform .5s, top .2s
-  transition: transform .5s, top .2s, -webkit-transform .5s
-  -webkit-transition-delay: .2s, 0s
-  -o-transition-delay: .2s, 0s
-  transition-delay: 0.2s, 0s
-
-.sw-bottom
-  position: relative
-  width: 28px
-  height: 3px
-  top: 6.6px
-  background: #fff
-  border: none
-  -webkit-border-radius: 4px 4px 4px 4px
-  border-radius: 4px 4px 4px 4px
-  -webkit-transition: top .2s, -webkit-transform .5s
-  transition: top .2s, -webkit-transform .5s
-  -o-transition: transform .5s, top .2s
-  transition: transform .5s, top .2s
-  transition: transform .5s, top .2s, -webkit-transform .5s
-  -webkit-transition-delay: .2s, 0s
-  -o-transition-delay: .2s, 0s
-  transition-delay: 0.2s, 0s
-
-.sw-footer
-  position: relative
-  width: 28px
-  height: 3px
-  top: 13.5px
-  background: #fff
-  border: none
-  -webkit-border-radius: 4px 4px 4px 4px
-  border-radius: 4px 4px 4px 4px
-  -webkit-transition: all .5s
-  -o-transition: all .5s
-  transition: all .5s
-  -webkit-transition-delay: .1s
-  -o-transition-delay: .1s
-  transition-delay: 0.1s
-
-.sandwich.active
-  .sw-topper
-    top: 9px
-    -webkit-transform: rotate(-45deg)
-    -ms-transform: rotate(-45deg)
-    transform: rotate(-45deg)
-  .sw-bottom
-    top: 6px
-    -webkit-transform: rotate(45deg)
-    -ms-transform: rotate(45deg)
-    transform: rotate(45deg)
-  .sw-footer
-    opacity: 0
-    top: 0
-    -webkit-transform: rotate(180deg)
-    -ms-transform: rotate(180deg)
-    transform: rotate(180deg)
-
 .topbar
   position: absolute
   z-index: 100
   margin: 0 auto
   width: 100%
-
-.mnu
-  float: right
-  ul
-    list-style-type: none
-    padding: 0
-    li
-      display: inline-block
-      margin: 0 8px
-      a
-        text-transform: uppercase
-        text-decoration: none
-        color: #fff
-        cursor: pointer
-        letter-spacing: 2px
-        &:hover
-          color: #2b2b2b
-          text-decoration: none
-
-.top-mnu
-  position: fixed
-  width: 100%
-  height: 100%
-  background-color: rgba(0, 0, 0, 0.8)
-  z-index: 50
-  right: 0
-  top: 0
-  display: none
-  li
-    list-style-type: none
-    padding: 0
-    margin: 0
-  ul
-    list-style-type: none
-    padding: 0
-    margin: 0
-    margin-top: 180px
-    text-align: center
-    a
-      color: #fff
-      display: block
-      padding: 20px 0
-      text-transform: uppercase
-      font-size: 12px
-      -webkit-transition: all .5s ease
-      -o-transition: all .5s ease
-      transition: all .5s ease
-      opacity: 0
-      position: relative
-      height: 60px
-      outline: 0
-      letter-spacing: 4px
-      text-decoration: none
-      &:hover
-        background-color: rgba(255, 255, 255, 0.1)
-        text-decoration: none
-        color: #2ea2cc
-    li
-      &:nth-child(1)
-        -webkit-animation-duration: .5s
-        animation-duration: 0.5s
-      &:nth-child(2)
-        -webkit-animation-duration: 1s
-        animation-duration: 1s
-        -webkit-animation-duration: 1.5s
-        animation-duration: 1.5s
-        -webkit-animation-duration: 2s
-        animation-duration: 2s
 
 .top-wrapper
   display: table
@@ -456,131 +220,37 @@ a
       text-align: center
       vertical-align: middle
 
-.img img
-  width: 100%
-  border-radius: 20px
+.img
   margin-bottom: 30px
+  text-align: center
+  img
+    width: 100%
+    border-radius: 8px
+  h3
+    margin-top: 10px
+    margin-bottom: 0
 
 .reverse
   text-align: right
 
 .s-wide
-	background-color: #fffef0
-	color: #333333
-	padding: 80px 0
+	background-color: $white
+	color: $grey
+	padding: 40px 0
 
 .s-dark
-  background-color: #fffef0
-  color: #333
+  background-color: $white
+  color: $grey
 
 .ishome .s-header .s-descr-wrap .s-descr
   margin-bottom: 50px
-
-.s-works
-  .col-lg-3
-    padding: 0
-  .work-item
-    display: block
-    position: relative
-    overflow: hidden
-  .work-item-content
-    position: absolute
-    padding-top: 25%
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background-color: rgba(0, 0, 0, 0.15)
-    text-align: center
-    opacity: 0
-    -webkit-transition: all .7s ease
-    -o-transition: all .7s ease
-    transition: all 0.7s ease
-  .work-item
-    img
-      -webkit-transition: all .5s ease
-      -o-transition: all .5s ease
-      transition: all 0.5s ease
-    &:hover
-      .work-item-content
-        opacity: 1
-      img
-        -webkit-transform: scale(1.01)
-        -ms-transform: scale(1.01)
-        transform: scale(1.01)
-  li, ul
-    list-style-type: none
-    padding: 0
-    margin: 0
-    text-align: center
-  li.active, ul.active
-    color: #fff
-    border-bottom: 1px solid #2ea2cc
-  li
-    display: inline-block
-    margin: 0 10px
-    text-transform: uppercase
-    font-size: 12px
-    cursor: pointer
-    line-height: 2
-    letter-spacing: 2px
-    margin-bottom: 8px
-    color: #888
-  ul
-    margin-bottom: 50px
-
-.responsive-img
-  max-width: 100%
-  width: 100%
-
-.main-form
-  .form-group
-    color: #888
-    letter-spacing: 2px
-  button
-    color: #fff
-    border: none
-    line-height: 40px
-    padding: 0 25px
-    font-size: 13px
-    text-transform: uppercase
-    font-weight: 600
-    margin-top: 10px
-    float: right
-    background-color: #2b2b2b
-    letter-spacing: 2px
-
-.form-group
-  display: block
-  margin-bottom: 20px
-  input, textarea
-    width: 100%
-    display: block
-    line-height: 30px
-    margin-top: 5px
-    border: 1px solid #ccc
-    -webkit-border-radius: 0
-    border-radius: 0
-    background: 0 0
-    color: #ccc
-    text-indent: 12px
-    font-size: 12px
-    background-color: transparent
-    letter-spacing: 2px
-  input:focus, textarea:focus
-    border: 1px solid #fd00e4
-  .text-danger
-    color: #fd00e4
-
-.color-element
-  color: #fd00e4
 
 .ishome footer
   background-color: #00002e
   color: #888
 
 footer
-  background-color: #f2f2f2
+  background-color: $light
   color: #222
   font-size: 13px
   font-weight: 300
@@ -594,7 +264,7 @@ footer
     width: 100%
 
 .s-about
-  color: #f2f2f2
+  color: $light
   ul
     list-style-type: none
     padding: 0
@@ -621,7 +291,7 @@ footer
 
 .feature_item
   .feature_name
-    color: #2b2b2b
+    color: $dark
     font-size: 1.125em
   p
     font-size: .875em
@@ -633,7 +303,7 @@ footer
 
 .divider
   height: 1px
-  background-color: #f2f2f2
+  background-color: $light
   display: block
   margin: 10px 0
 
@@ -802,7 +472,7 @@ body .s-header .s-descr-wrap .s-descr
   a
     color: #ccc
     &:hover
-      color: #fff
+      color: $white
 
 .mfp-s-error .mfp-content, .mfp-s-ready .mfp-preloader
   display: none
@@ -836,7 +506,7 @@ button
   text-align: center
   opacity: .65
   padding: 0 0 18px 10px
-  color: #fff
+  color: $white
   font-style: normal
   font-size: 28px
   font-family: Arial, Baskerville, monospace
@@ -846,10 +516,10 @@ button
     top: 1px
 
 .mfp-close-btn-in .mfp-close
-  color: #333
+  color: $grey
 
 .mfp-iframe-holder .mfp-close, .mfp-image-holder .mfp-close
-  color: #fff
+  color: $white
   right: -6px
   text-align: right
   padding-right: 6px
@@ -911,7 +581,7 @@ button
 .mfp-arrow-left
   left: 0
   &:after
-    border-right: 17px solid #fff
+    border-right: 17px solid $white
     margin-left: 31px
   &:before
     margin-left: 25px
@@ -920,7 +590,7 @@ button
 .mfp-arrow-right
   right: 0
   &:after
-    border-left: 17px solid #fff
+    border-left: 17px solid $white
     margin-left: 39px
   &:before
     border-left: 27px solid #3f3f3f
@@ -1096,7 +766,7 @@ html.js .loader .loader_inner
 
 body
   input:focus:required:invalid, textarea:focus:required:invalid, input:required:valid, textarea:required:valid
-    color: #666
+    color: $lightGrey
 
 .b-item
   width: 100%
@@ -1105,7 +775,7 @@ body
     width: 100%
 
 .s-about
-  color: #f2f2f2
+  color: $light
   ul
     list-style-type: none
     padding: 0
@@ -1136,7 +806,7 @@ body
 
 .divider
   height: 1px
-  background-color: #f2f2f2
+  background-color: $light
   display: block
   margin: 10px 0
 
