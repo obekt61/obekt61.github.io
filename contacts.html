@@ -29,50 +29,6 @@
 
   <link rel="stylesheet" href="css/main.min.css">
 
-  <style>
-    /* ---- grid ---- */
-    .grid {
-      background: #DDD;
-    }
-    
-    /* clear fix */
-    .grid:after {
-      content: '';
-      display: block;
-      clear: both;
-    }
-    
-    /* ---- .grid-item ---- */
-    .grid-sizer,
-    .grid-item {
-      width: 33.333%;
-    }
-    
-    .grid-item {
-      float: left;
-    }
-    
-    .grid-item img {
-      display: block;
-      max-width: 100%;
-    }
-  </style>
-
-  <script>
-    var grid = document.querySelector('.grid');
-
-    var msnry = new Masonry(grid, {
-      itemSelector: '.grid-item',
-      columnWidth: '.grid-sizer',
-      percentPosition: true
-    });
-
-    imagesLoaded(grid).on('progress', function () {
-      // layout Masonry after each image loads
-      msnry.layout();
-    });
-  </script>
-
 </head>
 
 <body>
@@ -86,29 +42,22 @@
   <header class="page-head">
     <div class="container">
       <div class="row">
-
         <div class="col-md-9 col-sm-9 col-xs-12">
-
           <nav>
             <ul>
-              <li><a href="index.html">Команда</a></li>
+              <li><a href="index.html">Главная</a></li>
               <li><a href="uslugi.html">Услуги</a></li>
               <li><a href="contacts.html">Контакты</a></li>
             </ul>
           </nav>
-
-
         </div>
       </div>
     </div>
   </header>
 
-
   <section class="s-wide s-dark">
-
     <div class="s-header">
       <div class="container">
-
         <div class="row">
           <div class="col-sm-10 col-sm-push-1">
             <h1>Контакты</h1>
@@ -116,12 +65,10 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
+    <!--  content  -->
     <div>
-
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-push-1">
@@ -129,26 +76,55 @@
             <h3>г. Новосибирск, Бехтерева Ольга</h3>
           </div>
         </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="img"><img src="./img/scans/scan1.png" alt="img_1"></div>
+          </div>
+          <div class="col-sm-12">
+            <div class="img"><img src="./img/scans/scan2.png" alt="img_2"></div>
+          </div>
+          <div class="col-sm-12">
+            <div class="img"><img src="./img/scans/scan3.png" alt="img_3"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="grid">
+            <div class="grid-item"><img src="./img/photos/img_1.jpg" alt="img_1"></div>
+            <div class="grid-item"><img src="./img/photos/img_2.jpg" alt="img_2"></div>
+            <div class="grid-item"><img src="./img/photos/img_3.jpg" alt="img_3"></div>
+            <div class="grid-item"><img src="./img/photos/img_4.jpg" alt="img_4"></div>
+            <div class="grid-item"><img src="./img/photos/img_5.jpg" alt="img_5"></div>
+            <div class="grid-item"><img src="./img/photos/img_6.jpg" alt="img_6"></div>
+            <div class="grid-item"><img src="./img/photos/img_7.jpg" alt="img_7"></div>
+            <div class="grid-item"><img src="./img/photos/img_8.jpg" alt="img_8"></div>
+            <div class="grid-item"><img src="./img/photos/img_9.jpg" alt="img_9"></div>
+            <div class="grid-item"><img src="./img/photos/img_10.jpg" alt="img_10"></div>
+            <div class="grid-item"><img src="./img/photos/img_11.jpg" alt="img_11"></div>
+            <div class="grid-item"><img src="./img/photos/img_12.jpg" alt="img_12"></div>
+            <div class="grid-item"><img src="./img/photos/img_13.jpg" alt="img_13"></div>
+            <div class="grid-item"><img src="./img/photos/img_14.jpg" alt="img_14"></div>
+            <div class="grid-item"><img src="./img/photos/img_15.jpg" alt="img_15"></div>
+            <div class="grid-item"><img src="./img/photos/img_16.jpg" alt="img_16"></div>
+            <div class="grid-item"><img src="./img/photos/img_17.jpg" alt="img_17"></div>
+            <div class="grid-item"><img src="./img/photos/img_18.jpg" alt="img_18"></div>
+            <div class="grid-item"><img src="./img/photos/img_19.jpg" alt="img_19"></div>
+            <div class="grid-item"><img src="./img/photos/img_20.jpg" alt="img_20"></div>
+            <div class="grid-item"><img src="./img/photos/img_21.jpg" alt="img_21"></div>
+            <div class="grid-item"><img src="./img/photos/img_22.jpg" alt="img_22"></div>
+            <div class="grid-item"><img src="./img/photos/img_23.jpg" alt="img_23"></div>
+            <div class="grid-item"><img src="./img/photos/img_24.jpg" alt="img_24"></div>
+          </div>
+        </div>
       </div> <!-- /container -->
-
     </div>
-
   </section>
 
   <footer class="main_footer bg_dark">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-
-          obekt61 &copy; 2018
-
-          <br>
-          С уважением,
-          Ольга.
-          Тел. 8 913 731 95 12
-          Г. Новосибирск
-  
-
+          obekt61 &copy; <span id="year"></span>
+          <br> С уважением, Ольга. Тел. 8 913 731 95 12 Г. Новосибирск
         </div>
       </div>
     </div>
@@ -175,5 +151,4 @@
   <!-- /Yandex.Metrika counter -->
 
 </body>
-
 </html>
